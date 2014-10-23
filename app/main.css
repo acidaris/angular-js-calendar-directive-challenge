@@ -2,7 +2,36 @@
 div.day.otherMonth{
 
 }
-div.day{
 
+div#control {
+    background-color: black;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+div.calendar {
+    height: 100%
+}
+
+div#calendar-body {
+    overflow: auto;
+    height: 100%;
+}
+
+div.day {
+    float: left;
+    width: 14%;
+    height: 20%;
+    border:1px solid black;
+    background-color: floralwhite;
+}
+
+div.day .weekday {
+    background-color: azure;
+    height:100%;
 }
 

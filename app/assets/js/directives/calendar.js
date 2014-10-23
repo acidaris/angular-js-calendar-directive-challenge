@@ -10,8 +10,8 @@ angular.module('calendar', []).directive('calendar',function(){
 //      TODO: add moment to more easily change dates.
       var init = function()
       {
-        var range = CalendarRange.getMonthlyRange(new Date());
-        console.log(range);
+        $scope.range = CalendarRange.getMonthlyRange(new Date());
+        console.log($scope.range);
       };
 
       init();
