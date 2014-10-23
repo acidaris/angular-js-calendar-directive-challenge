@@ -35,3 +35,15 @@ div.day .weekday {
     height:100%;
 }
 
+div.day .future {
+    background-color: darkgray;
+    height: 100%;
+    color: whitesmoke;
+}
+
+div.day .past {
+    background-color: darkgray;
+    height: 100%;
+    color: whitesmoke;
+}
+
