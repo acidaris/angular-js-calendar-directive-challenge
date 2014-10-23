@@ -19,7 +19,6 @@ angular.module('calendar').directive('calendarYear', function () {
 
   return {
     restrict : 'A',
-    require : '?^calendar',
     compile : function(elem) {
 
       var options = '';

@@ -51,11 +51,15 @@ angular.module('calendar', []).directive('calendar', function() {
        * being displayed.
        * @returns {{height: string}}
        */
-      $scope.dayHeight = function() {
+      $scope.dayStyle = function() {
         var weeks = $scope.range.days.length / 7;
-        return {height : 100/weeks+'%'};
+        return {height : Math.floor(100/weeks)+'%'};
       };
 
+      this.getRange = function()
+      {
+        return $scope.range;
+      };
     }
-  }
+  };
 });

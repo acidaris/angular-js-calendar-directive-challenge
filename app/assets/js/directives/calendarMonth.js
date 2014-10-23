@@ -20,7 +20,6 @@ angular.module('calendar').directive('calendarMonth', function () {
 
   return {
     restrict : 'A',
-    require : '?^calendar',
     compile : function(elem) {
 
       var options = '';

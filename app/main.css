@@ -35,7 +35,7 @@ div.day .weekday {
     height:100%;
 }
 
-div.day .future, div.day .past{
+div.day .notInMonth{
     background-color: lightgrey;
     height: 100%;
 }
