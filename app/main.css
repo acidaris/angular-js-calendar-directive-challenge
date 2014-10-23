@@ -26,24 +26,16 @@ div.day {
     float: left;
     width: 14%;
     height: 20%;
-    border:1px solid lightgrey;
+    border:1px solid darkgrey;
     background-color: floralwhite;
 }
 
 div.day .weekday {
-    background-color: azure;
+    background-color: white;
     height:100%;
 }
 
-div.day .future {
-    background-color: darkgray;
+div.day .future, div.day .past{
+    background-color: lightgrey;
     height: 100%;
-    color: whitesmoke;
 }
-
-div.day .past {
-    background-color: darkgray;
-    height: 100%;
-    color: whitesmoke;
-}
-
