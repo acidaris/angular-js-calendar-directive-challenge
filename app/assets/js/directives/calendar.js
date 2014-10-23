@@ -7,7 +7,14 @@ angular.module('calendar', []).directive('calendar', function() {
     templateUrl : './assets/partials/calendar.html',
     controller : function($scope) {
 
+      /**
+       * Date used to calculate month currently being dispayed.
+       */
       var date;
+
+      /**
+       * Initialization of controller.
+       */
       var init = function() {
         date = moment().startOf('month');
         $scope.calendar = {};
@@ -19,6 +26,9 @@ angular.module('calendar', []).directive('calendar', function() {
 
       init();
 
+      /**
+       * Watch calendar month and update calendar
+       */
       $scope.$watch('calendar.month', function(value) {
         if (date) {
           date.set('month', value - 1);
@@ -26,12 +36,25 @@ angular.module('calendar', []).directive('calendar', function() {
         }
       });
 
+      /**
+       * Watch calendar year and update calendar
+       */
       $scope.$watch('calendar.year', function(value) {
         if (date) {
           date.set('year', value);
           $scope.range = CalendarRange.getMonthlyRange(date.toDate());
         }
       });
+
+      /**
+       * Provides height styles for days depending on the number of weeks in the month
+       * being displayed.
+       * @returns {{height: string}}
+       */
+      $scope.dayHeight = function() {
+        var weeks = $scope.range.days.length / 7;
+        return {height : 100/weeks+'%'};
+      };
 
     }
   }

@@ -6,5 +6,5 @@ angular.module('calendar').directive('calendarDay', function () {
      restrict: 'A',
      require:'?^calendar',
      templateUrl: './assets/partials/calendar-day.html'
-   }
+   };
 });
